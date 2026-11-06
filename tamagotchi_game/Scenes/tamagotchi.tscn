@@ -1,8 +1,57 @@
 [gd_scene format=3 uid="uid://dcc07gaytxar4"]
 
 [ext_resource type="Script" uid="uid://bt1h6g0hd5ato" path="res://Scripts/tamagotchi.gd" id="1_5slu1"]
+[ext_resource type="Texture2D" uid="uid://dj6chftghl7wn" path="res://Assets/bunnysprites.png" id="2_6t4ny"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c46fy"]
+atlas = ExtResource("2_6t4ny")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ygjr"]
+atlas = ExtResource("2_6t4ny")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gjc2"]
+atlas = ExtResource("2_6t4ny")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l73fy"]
+atlas = ExtResource("2_6t4ny")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jjgbg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c46fy")
+}],
+"loop": 1,
+"name": &"Angry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ygjr")
+}],
+"loop": 1,
+"name": &"Happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gjc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l73fy")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}]
 
 [node name="Tamagotchi" type="Node2D" unique_id=786290119]
 script = ExtResource("1_5slu1")
 
 [node name="TamagotchiAnimations" type="AnimatedSprite2D" parent="." unique_id=1457508312]
+sprite_frames = SubResource("SpriteFrames_jjgbg")
+animation = &"Happy"

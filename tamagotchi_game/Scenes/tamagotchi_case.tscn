@@ -1,8 +1,54 @@
 [gd_scene format=3 uid="uid://p8s8qbscyly8"]
 
 [ext_resource type="Script" uid="uid://dh53rpsuk82br" path="res://Scripts/tamagotchi_case.gd" id="1_ubnlh"]
+[ext_resource type="Texture2D" uid="uid://bp8sjskt4b7ae" path="res://Assets/CaseTamagotchi.png" id="2_wye3r"]
+[ext_resource type="PackedScene" uid="uid://dcc07gaytxar4" path="res://Scenes/tamagotchi.tscn" id="3_ktv2b"]
 
 [node name="TamagotchiCase" type="Node2D" unique_id=1489978088]
 script = ExtResource("1_ubnlh")
 
 [node name="Case" type="Sprite2D" parent="." unique_id=1936679114]
+scale = Vector2(4.000012, 4.000012)
+texture = ExtResource("2_wye3r")
+
+[node name="Tamagotchi" parent="." unique_id=786290119 instance=ExtResource("3_ktv2b")]
+position = Vector2(6, 9)
+scale = Vector2(3.4584243, 3.4584243)
+
+[node name="MoveButton" type="Button" parent="." unique_id=1951960994]
+modulate = Color(1, 1, 1, 0)
+offset_left = -71.99999
+offset_top = 88.99999
+offset_right = -63.999992
+offset_bottom = 96.99999
+scale = Vector2(5.1356425, 5.1356425)
+
+[node name="AcceptButton" type="Button" parent="." unique_id=1043758126]
+modulate = Color(1, 1, 1, 0)
+offset_left = -21.000004
+offset_top = 104.00001
+offset_right = -13.000004
+offset_bottom = 112.00001
+scale = Vector2(5.1356425, 5.1356425)
+
+[node name="CancelButton" type="Button" parent="." unique_id=1284083689]
+modulate = Color(1, 1, 1, 0)
+offset_left = 29.999992
+offset_top = 89.00001
+offset_right = 37.999992
+offset_bottom = 97.00001
+scale = Vector2(5.1356425, 5.1356425)
+
+[node name="ScreenButton" type="Button" parent="." unique_id=2041659725]
+modulate = Color(1, 1, 1, 0)
+offset_left = -76.0
+offset_top = -76.99998
+offset_right = -68.0
+offset_bottom = -68.99998
+scale = Vector2(19.655645, 18.415642)
+
+[connection signal="pressed" from="MoveButton" to="." method="_on_move_button_pressed"]
+[connection signal="pressed" from="AcceptButton" to="." method="_on_accept_button_pressed"]
+[connection signal="pressed" from="CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="button_down" from="ScreenButton" to="." method="_on_screen_button_button_down"]
+[connection signal="button_up" from="ScreenButton" to="." method="_on_screen_button_button_up"]

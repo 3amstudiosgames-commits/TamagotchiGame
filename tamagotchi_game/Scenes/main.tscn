@@ -1,3 +1,25 @@
 [gd_scene format=3 uid="uid://bg07asaekv35p"]
 
+[ext_resource type="Texture2D" uid="uid://tn0k5xnfwoo1" path="res://Assets/background.jpg" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://p8s8qbscyly8" path="res://Scenes/tamagotchi_case.tscn" id="1_jjgbg"]
+
 [node name="Main" type="Node2D" unique_id=569126303]
+texture_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=316918341]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -19.0
+offset_top = -145.0
+offset_right = 1180.0
+offset_bottom = 748.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_bo1nx")
+
+[node name="TamagotchiCase" parent="." unique_id=1489978088 instance=ExtResource("1_jjgbg")]
+position = Vector2(567, 311)
+scale = Vector2(1.3516033, 1.3516033)

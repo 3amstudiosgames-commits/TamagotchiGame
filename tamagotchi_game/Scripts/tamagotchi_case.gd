@@ -1,11 +1,23 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+
+func _on_move_button_pressed() -> void:
+	print("move button pressed")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_accept_button_pressed() -> void:
+	print("accept button pressed")
+
+
+func _on_cancel_button_pressed() -> void:
+	print("cancel button pressed")
+
+
+
+func _on_screen_button_button_down() -> void:
+	print("Screen is being pressed down")
+
+
+func _on_screen_button_button_up() -> void:
+	print("Screen is not being pressed down")
