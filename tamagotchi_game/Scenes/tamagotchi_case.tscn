@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://p8s8qbscyly8"]
+
+[ext_resource type="Script" uid="uid://dh53rpsuk82br" path="res://Scripts/tamagotchi_case.gd" id="1_ubnlh"]
+
+[node name="TamagotchiCase" type="Node2D" unique_id=1489978088]
+script = ExtResource("1_ubnlh")
+
+[node name="Case" type="Sprite2D" parent="." unique_id=1936679114]

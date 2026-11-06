@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dcc07gaytxar4"]
+
+[ext_resource type="Script" uid="uid://bt1h6g0hd5ato" path="res://Scripts/tamagotchi.gd" id="1_5slu1"]
+
+[node name="Tamagotchi" type="Node2D" unique_id=786290119]
+script = ExtResource("1_5slu1")
+
+[node name="TamagotchiAnimations" type="AnimatedSprite2D" parent="." unique_id=1457508312]
